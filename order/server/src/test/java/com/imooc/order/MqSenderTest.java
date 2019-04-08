@@ -12,19 +12,19 @@ import java.util.Date;
  * Created by 廖师兄
  * 2018-02-04 22:06
  */
-@Component
+//@Component
 public class MqSenderTest extends OrderApplicationTests {
 
-    @Autowired
-    private AmqpTemplate amqpTemplate;
-
-    @Test
-    public void send() {
-        amqpTemplate.convertAndSend("myQueue", "now " + new Date());
-    }
-
-    @Test
-    public void sendOrder() {
-        amqpTemplate.convertAndSend("myOrder", "computer", "now " + new Date());
-    }
+//    @Autowired
+//    private AmqpTemplate amqpTemplate;
+//
+//    @Test
+//    public void send() {
+//        amqpTemplate.convertAndSend("myQueue", "now " + new Date());
+//    }
+//
+//    @Test
+//    public void sendOrder() {
+//        amqpTemplate.convertAndSend("myOrder", "computer", "now " + new Date());
+//    }
 }

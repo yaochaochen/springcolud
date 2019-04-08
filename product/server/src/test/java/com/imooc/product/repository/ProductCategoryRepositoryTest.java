@@ -15,17 +15,17 @@ import java.util.List;
  * Created by 廖师兄
  * 2017-12-09 21:43
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class ProductCategoryRepositoryTest {
 
-    @Autowired
-    private ProductCategoryRepository productCategoryRepository;
+  //  @Autowired
+    //private ProductCategoryRepository productCategoryRepository;
 
-    @Test
-    public void findByCategoryTypeIn() throws Exception {
-        List<ProductCategory> list = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(11, 22));
-        Assert.assertTrue(list.size() > 0);
-    }
+//    @Test
+//    public void findByCategoryTypeIn() throws Exception {
+//        List<ProductCategory> list = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(11, 22));
+//        Assert.assertTrue(list.size() > 0);
+//    }
 
 }

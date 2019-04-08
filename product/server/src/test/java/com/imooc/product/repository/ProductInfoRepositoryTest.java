@@ -15,23 +15,23 @@ import java.util.List;
  * Created by 廖师兄
  * 2017-12-09 21:32
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//gRunner.class)
+//@SpringBootTest
 public class ProductInfoRepositoryTest {
 
-    @Autowired
-    private ProductInfoRepository productInfoRepository;
-
-    @Test
-    public void findByProductStatus() throws Exception {
-        List<ProductInfo> list = productInfoRepository.findByProductStatus(0);
-        Assert.assertTrue(list.size() > 0);
-    }
-
-    @Test
-    public void findByProductIdIn() throws Exception {
-        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("157875196366160022", "157875227953464068"));
-        Assert.assertTrue(list.size() > 0);
-    }
+//    @Autowired
+//    private ProductInfoRepository productInfoRepository;
+//
+//    @Test
+//    public void findByProductStatus() throws Exception {
+//        List<ProductInfo> list = productInfoRepository.findByProductStatus(0);
+//        Assert.assertTrue(list.size() > 0);
+//    }
+//
+//    @Test
+//    public void findByProductIdIn() throws Exception {
+//        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("157875196366160022", "157875227953464068"));
+//        Assert.assertTrue(list.size() > 0);
+//    }
 
 }
