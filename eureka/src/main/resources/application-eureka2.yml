@@ -1,8 +1,10 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:8761/eureka/
-#    register-with-eureka: false
+      defaultZone: http://localhost:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  #    register-with-eureka: false
   server:
     enable-self-preservation: false
 spring:
