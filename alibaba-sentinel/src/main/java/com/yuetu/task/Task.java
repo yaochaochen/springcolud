@@ -2,9 +2,11 @@ package com.yuetu.task;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
+import java.util.concurrent.Future;
 
 /**
  * @ClassName Task
@@ -47,5 +49,12 @@ public class Task {
         log.info("完成任务三，耗时：" + (end - start) + "毫秒");
     }
     
-    
+    @Async("taskExecutor")
+    public Future<String> run() throws Exception {
+        long sleep = random.nextInt(10000);
+        log.info("开始任务，需消耗时："+ sleep + "毫秒");
+        Thread.sleep(sleep);
+        log.info("任务完成");
+        return new AsyncResult<>("test");
+    }
 }
