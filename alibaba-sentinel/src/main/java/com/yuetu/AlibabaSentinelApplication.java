@@ -1,6 +1,10 @@
 package com.yuetu;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.yuetu.error.MyException;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +12,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -38,9 +41,39 @@ public class AlibabaSentinelApplication {
         public String json() throws MyException {
             throw new MyException("发生错误2");
         }
+        @PostMapping("/user")
+        public UserDao user(@RequestBody UserDao userDao) throws MyException{
+            return userDao;
+            
+        }
+
+        /**
+         * LocalDate、LocalTime、LocalDateTime序列化问题
+         * @return
+         */
+
+        @Bean
+        public ObjectMapper serializingObjectMapper() {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+            objectMapper.registerModule(new JavaTimeModule());
+            return objectMapper;
+        }
 
 
     }
+    @Getter
+    @Setter
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    static class UserDao {
+        
+        private String userName;
+        
+        private LocalDate birthday;
+    }
+    
     /**
      * 定义线程池
      */
@@ -66,5 +99,7 @@ public class AlibabaSentinelApplication {
             
         }
     }
+
+   
     
 }
