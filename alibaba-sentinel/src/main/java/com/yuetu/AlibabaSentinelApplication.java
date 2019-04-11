@@ -1,5 +1,6 @@
 package com.yuetu;
 
+import com.yuetu.error.MyException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.Executor;
@@ -31,6 +33,12 @@ public class AlibabaSentinelApplication {
             return "hello yaochaochen";
 
         }
+        
+        @RequestMapping("/json")
+        public String json() throws MyException {
+            throw new MyException("发生错误2");
+        }
+
 
     }
     /**
