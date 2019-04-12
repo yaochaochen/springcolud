@@ -13,7 +13,7 @@ import java.util.List;
 
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-10 21:04
  */
 @FeignClient(name = "product", fallback = ProductClient.ProductClientFallback.class)

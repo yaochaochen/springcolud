@@ -7,7 +7,7 @@ import com.imooc.product.dataobject.ProductInfo;
 import java.util.List;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-09 21:57
  */
 public interface ProductService {

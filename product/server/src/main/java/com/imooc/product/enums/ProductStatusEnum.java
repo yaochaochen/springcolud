@@ -4,7 +4,7 @@ import lombok.Getter;
 
 /**
  * 商品上下架状态
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-09 22:00
  */
 @Getter

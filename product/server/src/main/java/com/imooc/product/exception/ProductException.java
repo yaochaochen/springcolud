@@ -3,7 +3,7 @@ package com.imooc.product.exception;
 import com.imooc.product.enums.ResultEnum;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-10 22:59
  */
 public class ProductException extends RuntimeException {

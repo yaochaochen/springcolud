@@ -6,7 +6,7 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2018-02-13 18:16
  */
 public interface StreamClient {

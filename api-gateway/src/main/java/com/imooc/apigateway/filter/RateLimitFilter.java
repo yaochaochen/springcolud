@@ -10,7 +10,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 
 /**
  * 限流
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2018-03-11 23:44
  */
 @Component

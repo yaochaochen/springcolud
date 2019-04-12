@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 /**
  * 跨域配置
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2018-03-11 23:04
  * C - Cross  O - Origin  R - Resource  S - Sharing
  */

@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.stereotype.Component;
 
 ///**
-// * Created by 廖师兄
+// * Created by yaochaochen
 // * 2018-02-15 10:21
 // */
 @Component

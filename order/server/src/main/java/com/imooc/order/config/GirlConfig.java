@@ -6,7 +6,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2018-07-11 16:52
  */
 @Data

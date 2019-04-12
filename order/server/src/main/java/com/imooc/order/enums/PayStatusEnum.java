@@ -3,7 +3,7 @@ package com.imooc.order.enums;
 import lombok.Getter;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-10 16:20
  */
 @Getter

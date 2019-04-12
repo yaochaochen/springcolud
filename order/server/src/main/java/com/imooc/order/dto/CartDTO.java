@@ -3,7 +3,7 @@ package com.imooc.order.dto;
 import lombok.Data;
 
 /**
- * Created by 廖师兄
+ * Created by yaochaochen
  * 2017-12-10 22:36
  */
 @Data

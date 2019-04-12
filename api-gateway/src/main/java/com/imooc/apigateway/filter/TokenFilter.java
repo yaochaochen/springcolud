@@ -12,7 +12,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
 //
 ///**
-// * Created by 廖师兄
+// * Created by yaochaochen
 // * 2018-02-15 15:34
 // */
 @Component
