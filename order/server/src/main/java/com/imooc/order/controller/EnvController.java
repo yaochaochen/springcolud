@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/env")
 public class EnvController {
 
-    @Value("${env}")
-    private String env;
+//    @Value("${env}")
+//    private String env;
 
     @GetMapping("/print")
     private String print() {
-        return env;
+        return "hello";
     }
 }

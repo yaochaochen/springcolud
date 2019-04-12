@@ -4,9 +4,9 @@ eureka:
       defaultZone: http://localhost:${server.port}/eureka/
     register-with-eureka: false
     fetch-registry: false
-  #    register-with-eureka: false
+  #  register-with-eureka: false
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
 spring:
   application:
     name: eureka

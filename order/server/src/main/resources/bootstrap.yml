@@ -2,11 +2,11 @@ spring:
   application:
     name: order
   cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: test
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG
+#      profile: testSave
     stream:
       bindings:
         myMessage:
@@ -19,14 +19,33 @@ spring:
   sleuth:
     sampler:
       probability: 1
+  datasource:
+    tomcat:
+      init-s-q-l:
+    url: jdbc:mysql://123.56.22.81:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+    username: ycc
+    password: 123456
+    
+  rabbitmq:
+    #host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+   
+    virtual-host: my_vhost
+
+
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
-  instance:
+      defaultZone: http://localhost:8761/eureka/
     prefer-ip-address: true
 
 logging:
   level:
     org.springframework.cloud.openfeign: debug
-    org.springframework.cloud.bus: debug
+    org.springframework.cloud.bus: debug.
+
+
+server:
+  port: 8670

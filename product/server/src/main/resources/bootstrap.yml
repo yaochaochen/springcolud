@@ -1,19 +1,31 @@
 spring:
   application:
     name: product
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: dev
+  datasource:
+    tomcat:
+      init-s-q-l:
+    url: jdbc:mysql://123.56.22.81:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+    username: ycc
+    password: 123456
+  rabbitmq:
+    username: admin
+    password: admin
+    virtual-host: my_vhost
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG
+#      profile: dev
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
 
 logging:
   level:
     org.springframework.cloud.netflix.feign: debug
+server:
+  port: 8670
