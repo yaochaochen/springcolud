@@ -3,10 +3,11 @@ spring:
     name: product
   datasource:
     tomcat:
-      init-s-q-l:
+      init-s-q-l:    
     url: jdbc:mysql://123.56.22.81:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
     username: ycc
     password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
   rabbitmq:
     username: admin
     password: admin
