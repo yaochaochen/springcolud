@@ -21,7 +21,7 @@ spring:
       probability: 1
   datasource:
     url: jdbc:mysql://123.56.22.81:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
-    username: ycc
+    username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
   rabbitmq:
