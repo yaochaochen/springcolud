@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config-repo
+          uri: https://gitee.com/darlingy/config-repo.git
+          username: 18511859517@163.com
+          password: chaochen
+          #basedir: config  
+  rabbitmq:
+    password: admin
+    username: admin
+    virtual-host: my_vhost
+server:
+  port: 8767
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      expose: "*"     
+      
