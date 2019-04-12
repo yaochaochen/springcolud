@@ -3,12 +3,12 @@ spring:
     name: api-getway
 server:
   port: 8762 
-  #cloud:
-    #config:
-      #discovery:
-        #enabled: true
-       # service-id: CONFIG
-     # profile: dev
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
 eureka:
   client:
     service-url:
