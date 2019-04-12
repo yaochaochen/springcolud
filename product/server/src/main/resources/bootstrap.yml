@@ -17,6 +17,9 @@ spring:
     enabled: true
     sender:
       type: web
+  sleuth:
+    sampler:
+      probability: 1     
 #  cloud:
 #    config:
 #      discovery:
