@@ -29,4 +29,12 @@ public interface ProductService {
      * @param decreaseStockInputList
      */
     void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
+
+    /**
+     *订单发起退款 回滚库存数量
+     * @param productId
+     * @param price
+     * @param productNum
+     */
+    void  refundStock(String productId,String price,Integer productNum);
 }

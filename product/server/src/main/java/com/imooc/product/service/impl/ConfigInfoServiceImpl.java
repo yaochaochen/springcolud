@@ -21,6 +21,7 @@ public class ConfigInfoServiceImpl implements ConfigInfoService {
     private ConfigInfoRepository repository;
     @Override
     public List<ConfigInfo> findByGroupId(Long groupId) {
+        
         return repository.findByAAndGroupId(groupId);
     }
 }
